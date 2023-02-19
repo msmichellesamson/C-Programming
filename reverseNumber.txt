@@ -1,0 +1,25 @@
+/*
+	Michelle Samson
+
+	c program to to reverse a given number:
+	  the user is prompted to enter an integer, and the program reverses it. The program repeatedly divides the number by 10 and adds the remainder (the last digit) to reversedN, which is then multiplied by 10 to shift the digits to the left. Finally, the program prints the reversed number.
+*/
+
+#include <stdio.h>
+
+int main() {
+    int n, reversedN = 0, remainder;
+
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+
+    while (n != 0) {
+        remainder = n % 10;
+        reversedN = reversedN * 10 + remainder;
+        n /= 10;
+    }
+
+    printf("The reversed number is %d.\n", reversedN);
+
+    return 0;
+}
